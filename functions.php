@@ -10,7 +10,9 @@ add_action('after_setup_theme', 'gym_theme_setup');
 function gym_theme_styles() {
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css');
+		wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Playfair+Display+SC|Raleway');
 	wp_enqueue_style( 'main-css', get_stylesheet_uri() );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'gym_theme_styles');
 
